@@ -126,8 +126,8 @@ if data_vol_to_insert and data_turnover_to_insert:
         ist_now = (datetime.utcnow() + timedelta(hours=5, minutes=30)).strftime('%d-%b %H:%M')
         status_msg = f"Data Date: {fetched_date_str} | Last Update: {ist_now} (IST)"
         
-        ws_volume.update('K2', [[status_msg]])
-        ws_turnover.update('K2', [[status_msg]])
+        ws_volume.update('O2', [[status_msg]])
+        ws_turnover.update('O2', [[status_msg]])
         
         print(f"SUCCESS: दोनों शीट्स (Volume और Turnover) {fetched_date_str} के डेटा से अपडेट हो गई हैं!")
     except Exception as e:
